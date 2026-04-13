@@ -34,3 +34,4 @@ jupyter notebook
 | # | 주제 | Colab |
 |---|------|-------|
 | 00 | 환경 설정 테스트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/00_setup_test.ipynb) |
+| -- | Colab Git 연동 설정 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/colab_git_setup.ipynb) |
