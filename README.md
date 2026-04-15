@@ -34,6 +34,7 @@ jupyter notebook
 | # | 주제 | Colab |
 |---|------|-------|
 | 00 | 환경 설정 테스트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/00_setup_test.ipynb) |
+| 02 | MLP 차원 이해 + BatchNorm/Optimizer 비교 실습 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/tensorflow_002_mlp_shape_and_training_experiments.ipynb) |
 | 08 | RNN→LSTM→Attention→BERT 감정분류 비교 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_rnn_lstm_attention_bert.ipynb) |
 | 08-1 | RNN 밑바닥 구현 (수식 + numpy + BPTT) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_01_rnn_from_scratch.ipynb) |
 | 08-2 | LSTM 밑바닥 구현 (3개 게이트 + Cell State) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_02_lstm_from_scratch.ipynb) |
