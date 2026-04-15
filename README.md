@@ -35,4 +35,8 @@ jupyter notebook
 |---|------|-------|
 | 00 | 환경 설정 테스트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/00_setup_test.ipynb) |
 | 08 | RNN→LSTM→Attention→BERT 감정분류 비교 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_rnn_lstm_attention_bert.ipynb) |
+| 08-1 | RNN 밑바닥 구현 (수식 + numpy + BPTT) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_01_rnn_from_scratch.ipynb) |
+| 08-2 | LSTM 밑바닥 구현 (3개 게이트 + Cell State) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_02_lstm_from_scratch.ipynb) |
+| 08-3 | Attention 밑바닥 구현 (Bahdanau/Luong) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_03_attention_from_scratch.ipynb) |
+| 08-4 | BERT/Transformer 밑바닥 구현 (Self-Attention) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_04_bert_transformer_from_scratch.ipynb) |
 | -- | Colab Git 연동 설정 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/colab_git_setup.ipynb) |
