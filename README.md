@@ -34,4 +34,5 @@ jupyter notebook
 | # | 주제 | Colab |
 |---|------|-------|
 | 00 | 환경 설정 테스트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/00_setup_test.ipynb) |
+| 08 | RNN→LSTM→Attention→BERT 감정분류 비교 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/ch08_rnn_lstm_attention_bert.ipynb) |
 | -- | Colab Git 연동 설정 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/colab_git_setup.ipynb) |
