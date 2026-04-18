@@ -95,11 +95,37 @@ def resolve_repo_root(
     return _discover_repo_root(Path.cwd())
 
 
+def _install_nanum_on_colab(verbose: bool = True) -> None:
+    """Colab 런타임에 NanumGothic 폰트가 없으면 apt-get으로 설치한다.
+
+    Colab 기본 이미지에는 한글 폰트가 없어서
+    matplotlib가 DejaVu Sans로 fallback되고 그래프의 한글이 □ 로 깨진다.
+    ``fonts-nanum`` 패키지를 설치하면 ``/usr/share/fonts/truetype/nanum/``
+    아래에 NanumGothic 계열 ttf가 배치된다.
+    """
+
+    nanum_dir = Path("/usr/share/fonts/truetype/nanum")
+    if nanum_dir.exists() and any(nanum_dir.glob("Nanum*.ttf")):
+        return  # 이미 설치됨
+
+    if verbose:
+        print("Colab 런타임에 NanumGothic이 없어 apt-get으로 설치합니다...")
+    try:
+        subprocess.run(
+            ["apt-get", "-qq", "install", "-y", "fonts-nanum"],
+            check=True,
+        )
+    except (subprocess.CalledProcessError, FileNotFoundError) as exc:
+        if verbose:
+            print(f"NanumGothic 설치 실패: {exc}. 그래프에서 한글이 깨질 수 있습니다.")
+
+
 def configure_matplotlib_font(verbose: bool = True) -> Optional[str]:
     """사용 가능한 한글 폰트를 찾아 matplotlib 기본 폰트로 등록한다.
 
-    Colab, macOS, Windows에서 자주 보이는 후보 폰트를 순서대로 확인한다.
-    폰트가 하나도 없으면 matplotlib 기본 폰트를 그대로 사용한다.
+    Colab에서는 NanumGothic 패키지를 자동 설치하고, 설치 후에는
+    ``font_manager.addfont``로 즉시 폰트를 등록해서
+    커널 재시작 없이 바로 한글을 렌더링할 수 있게 한다.
 
     Args:
         verbose: 설정 결과를 출력할지 여부.
@@ -116,6 +142,18 @@ def configure_matplotlib_font(verbose: bool = True) -> Optional[str]:
         if verbose:
             print("matplotlib가 아직 설치되지 않아 폰트 설정을 건너뜁니다.")
         return None
+
+    # Colab이면 NanumGothic 설치 + matplotlib에 즉시 등록 (캐시 재빌드 없이)
+    if running_in_colab():
+        _install_nanum_on_colab(verbose=verbose)
+        nanum_candidates = [
+            Path("/usr/share/fonts/truetype/nanum/NanumGothic.ttf"),
+            Path("/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"),
+        ]
+        for ttf in nanum_candidates:
+            if ttf.exists():
+                # addfont는 현재 런타임에서 새 폰트를 즉시 사용 가능하게 한다.
+                font_manager.fontManager.addfont(str(ttf))
 
     candidates = [
         "NanumGothic",
