@@ -29,14 +29,14 @@
 
 ## 주요 노트북 Colab 링크
 
-- [01_foundations/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/01_foundations/Code.ipynb)
-- [02_fundamentals/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/02_fundamentals/Code.ipynb)
-- [03_dlfs/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/03_dlfs/Code.ipynb)
-- [04_extensions/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/04_extensions/Code.ipynb)
-- [05_convolutions/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/05_convolutions/Code.ipynb)
-- [05_convolutions/Numpy_Convolution_Demos.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/05_convolutions/Numpy_Convolution_Demos.ipynb)
-- [06_rnns/RNN_DLFS.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/06_rnns/RNN_DLFS.ipynb)
-- [07_PyTorch/Code.ipynb](https://colab.research.google.com/github/flourscent/DLFS_code/blob/master/07_PyTorch/Code.ipynb)
+- [01_foundations/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/01_foundations/Code.ipynb)
+- [02_fundamentals/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/02_fundamentals/Code.ipynb)
+- [03_dlfs/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/03_dlfs/Code.ipynb)
+- [04_extensions/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/04_extensions/Code.ipynb)
+- [05_convolutions/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/05_convolutions/Code.ipynb)
+- [05_convolutions/Numpy_Convolution_Demos.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/05_convolutions/Numpy_Convolution_Demos.ipynb)
+- [06_rnns/RNN_DLFS.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/06_rnns/RNN_DLFS.ipynb)
+- [07_PyTorch/Code.ipynb](https://colab.research.google.com/github/glasslego/2026-ml-study/blob/main/notebooks/DLFS_code/07_PyTorch/Code.ipynb)
 
 ### `lincoln` 패키지
 
