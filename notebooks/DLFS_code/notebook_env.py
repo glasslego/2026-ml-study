@@ -21,8 +21,9 @@ from pathlib import Path
 from typing import Optional
 
 
-REPO_URL = "https://github.com/flourscent/DLFS_code.git"
-REPO_NAME = "DLFS_code"
+REPO_URL = "https://github.com/glasslego/2026-ml-study.git"
+REPO_NAME = "2026-ml-study"
+DLFS_SUBDIR = "notebooks/DLFS_code"
 
 
 def running_in_colab() -> bool:
@@ -56,18 +57,29 @@ def _discover_repo_root(start: Path) -> Path:
 
 
 def _ensure_colab_repo(repo_url: str = REPO_URL, repo_name: str = REPO_NAME) -> Path:
-    """Colab 런타임에 저장소가 없으면 clone하고, 있으면 재사용한다."""
+    """Colab 런타임에 저장소가 없으면 clone하고, 있으면 재사용한다.
 
-    repo_root = Path("/content") / repo_name
-    if not repo_root.exists():
+    상위 저장소(glasslego/2026-ml-study)를 clone한 뒤
+    실제 DLFS_code 루트는 ``notebooks/DLFS_code`` 하위에 있으므로
+    그 경로를 저장소 루트로 반환한다.
+    """
+
+    clone_root = Path("/content") / repo_name
+    if not clone_root.exists():
         print(f"Colab 런타임에 {repo_name} 저장소가 없어 새로 clone합니다.")
         subprocess.run(
-            ["git", "clone", repo_url, str(repo_root)],
+            ["git", "clone", repo_url, str(clone_root)],
             check=True,
         )
     else:
         print(f"Colab 런타임에 기존 {repo_name} 저장소를 재사용합니다.")
 
+    repo_root = clone_root / DLFS_SUBDIR
+    if not repo_root.exists():
+        raise FileNotFoundError(
+            f"클론된 저장소에서 DLFS_code 경로({repo_root})를 찾지 못했습니다. "
+            "DLFS_SUBDIR 값 또는 원격 저장소 구조를 확인하세요."
+        )
     return repo_root
 
 
